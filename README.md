@@ -1,4 +1,4 @@
-## QRCode
+# QRCode
 
 Desktop QRCode Recognize
 
@@ -20,3 +20,17 @@ What's more, if the QRCode is an website, the program could open it in browser a
 1. Install JDK or JRE(version 1.8+);
 2. Download source code and export to a JAR file;
 3. Double click to run the file, find it on taskbar and use it.
+
+OR
+
+1. Download qrcode.exe and run it (JRE required).
+
+## Develop Environment
+
+> IntelliJ IDEA 15.0.2
+
+> java version "1.8.0_121"
+
+> Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+
+> Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
