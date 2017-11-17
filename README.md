@@ -34,3 +34,7 @@ OR
 > Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
 
 > Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+
+## Screenshot
+
+![设置截图](https://github.com/lifankohome/QRCode/blob/master/20171117194114.jpg)
