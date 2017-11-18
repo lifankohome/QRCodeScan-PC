@@ -1,6 +1,6 @@
 # QRCode
 
-Desktop QRCode Recognize
+Desktop QRCode Recognize & Screen Capture
 
 ## Functions
 
