@@ -11,19 +11,19 @@ You can get a screenshot very much easily with this, after you select the area t
 
 Also the program attach an unique function: QRCode droid. You can select an QRCode image area, then it will show a dialog to tell you what is contained in the QRCode, at the same time, the text would be copied to clipboard automatic.
  
-What's more, if the QRCode is an website, the program could open it in browser automatic.
+What's more, if the QRCode is a website, the program could open it in browser automatic.
 
-**Of course, you could turn off Auto-Copy and Auto-open in SETTING.**
+**Of course, you could turn off Auto-Copy and Auto-Open in SETTING.**
 
 ## How to Use
 
-1. Install JDK or JRE(version 1.8+);
-2. Download source code and export to a JAR file;
-3. Double click to run the file, find it on taskbar and use it.
+ + Install JDK or JRE(version 1.8+);
+ + Download source code and export to a JAR file;
+ + Double click to run the file, find it on taskbar and use it.
 
 OR
 
-1. Download qrcode.exe and run it (JRE required).
+ +  Download qrcode.exe and run it (JRE required).
 
 ## Develop Environment
 
