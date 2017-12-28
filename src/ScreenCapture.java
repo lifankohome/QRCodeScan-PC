@@ -16,7 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class ScreenCapture {
-    private static ScreenCapture defaultCapturer = new ScreenCapture();
+    private static ScreenCapture defaultCapture = new ScreenCapture();
     private int x1, y1, x2, y2;
     private int recX, recY, recH, recW; // 截取的图像
     private boolean isFirstPoint = true;
@@ -99,7 +99,7 @@ public class ScreenCapture {
 
     // 单例模式
     public static ScreenCapture getInstance() {
-        return defaultCapturer;
+        return defaultCapture;
     }
 
     // 捕捉屏幕的一个矫形区域

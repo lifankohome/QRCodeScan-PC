@@ -21,12 +21,10 @@ import javax.swing.border.EmptyBorder;
 
 @SuppressWarnings("serial")
 public class Window extends JFrame {
-    private JPanel contentPane;
     public static Window frame;
     public static String autoOpen = "0", autoCopy = "0";
     private static String ConfigPath;
-    private static JCheckBox chckbxOpen, chckbxCopy;
-    private JTextPane txtpnwordqq;
+    private static JCheckBox checkboxOpen, checkboxCopy;
 
     /**
      * Launch the application.
@@ -56,14 +54,14 @@ public class Window extends JFrame {
                     autoOpen = configBuf.substring(36, 37);
                     autoCopy = configBuf.substring(37, 38);
                     if (autoOpen.equals("0")) {
-                        chckbxOpen.setSelected(false);
+                        checkboxOpen.setSelected(false);
                     }
                     if (autoCopy.equals("0")) {
-                        chckbxCopy.setSelected(false);
+                        checkboxCopy.setSelected(false);
                     }
                 }
 
-                Min.creat(); // 创建托盘图标
+                Min.create(); // 创建托盘图标
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -95,20 +93,20 @@ public class Window extends JFrame {
         setResizable(false);
         setTitle("Setting");
         setBounds(100, 100, 315, 175);
-        contentPane = new JPanel();
+        JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
 
-        chckbxOpen = new JCheckBox("Auto open If QRCode contains URL");
-        chckbxOpen.setSelected(true);
-        chckbxOpen.setFont(new Font("Consolas", Font.PLAIN, 14));
+        checkboxOpen = new JCheckBox("Auto open If QRCode contains URL");
+        checkboxOpen.setSelected(true);
+        checkboxOpen.setFont(new Font("Consolas", Font.PLAIN, 14));
 
-        chckbxCopy = new JCheckBox("Auto copy QRCode text to clipboard");
-        chckbxCopy.setSelected(true);
-        chckbxCopy.setFont(new Font("Consolas", Font.PLAIN, 14));
+        checkboxCopy = new JCheckBox("Auto copy QRCode text to clipboard");
+        checkboxCopy.setSelected(true);
+        checkboxCopy.setFont(new Font("Consolas", Font.PLAIN, 14));
         contentPane.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-        contentPane.add(chckbxOpen);
-        contentPane.add(chckbxCopy);
+        contentPane.add(checkboxOpen);
+        contentPane.add(checkboxCopy);
 
         JButton btnScan = new JButton("About");
         btnScan.setFont(new Font("SansSerif", Font.ITALIC, 12));
@@ -128,14 +126,14 @@ public class Window extends JFrame {
             @Override
             public void mouseClicked(MouseEvent arg0) {
                 String configBuf = "";
-                if (chckbxOpen.isSelected()) {
+                if (checkboxOpen.isSelected()) {
                     configBuf += "1";
                     autoOpen = "1";
                 } else {
                     configBuf += "0";
                     autoOpen = "0";
                 }
-                if (chckbxCopy.isSelected()) {
+                if (checkboxCopy.isSelected()) {
                     configBuf += "1";
                     autoCopy = "1";
                 } else {
@@ -147,11 +145,11 @@ public class Window extends JFrame {
         });
         contentPane.add(btnSave);
 
-        txtpnwordqq = new JTextPane();
-        txtpnwordqq.setEditable(false);
-        txtpnwordqq.setFont(new Font("微软雅黑 Light", Font.PLAIN, 14));
-        txtpnwordqq
+        JTextPane tipText = new JTextPane();
+        tipText.setEditable(false);
+        tipText.setFont(new Font("微软雅黑 Light", Font.PLAIN, 14));
+        tipText
                 .setText("The screenshot image will copy to clipboard,\r\nso you can paste it in WORD or QQ directly.");
-        contentPane.add(txtpnwordqq);
+        contentPane.add(tipText);
     }
 }

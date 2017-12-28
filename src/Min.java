@@ -24,7 +24,7 @@ import javax.swing.JOptionPane;
 public class Min implements ActionListener {
 	public static TrayIcon trayIcon;
 
-	public static void creat() {
+	public static void create() {
 		if (SystemTray.isSupported()) {// 判断是否支持系统托盘
 
 			URL url = Min.class.getResource("icon.png");// 获取图片所在的URL
@@ -49,17 +49,20 @@ public class Min implements ActionListener {
 			// 创建弹出菜单
 			PopupMenu popupMenu = new PopupMenu();
 
-			MenuItem cut = new MenuItem("Screenshot");
+			MenuItem cut = new MenuItem("Screen Capture");
 			MenuItem qrcode = new MenuItem("QRCode Droid");
+			MenuItem qrcreate = new MenuItem("QRCode Create");
 			MenuItem setting = new MenuItem("Setting");
 			MenuItem exit = new MenuItem("Exit");
 			popupMenu.add(cut);
-			popupMenu.add(qrcode);
-			popupMenu.add(setting);
 			popupMenu.addSeparator();
+			popupMenu.add(qrcode);
+			popupMenu.add(qrcreate);
+			popupMenu.addSeparator();
+			popupMenu.add(setting);
 			popupMenu.add(exit);
 
-			trayIcon.setPopupMenu(popupMenu);// 为托盘图标加弹出菜弹
+			trayIcon.setPopupMenu(popupMenu);// 为托盘图标加弹出菜单
 
 			SystemTray systemTray = SystemTray.getSystemTray();// 获得系统托盘对象
 			try {
@@ -67,12 +70,14 @@ public class Min implements ActionListener {
 			} catch (Exception e) {
 				 e.printStackTrace();
 			}
+
+			cut.addActionListener(e -> cut());
+			qrcode.addActionListener(e -> qrcode());
+			qrcreate.addActionListener(e -> QRCreate());
 			setting.addActionListener(e -> {
                 Window.frame.setVisible(true);
                 Window.frame.setExtendedState(Frame.NORMAL);
             });
-			cut.addActionListener(e -> cut());
-			qrcode.addActionListener(e -> qrcode());
 			exit.addActionListener(e -> System.exit(0));
 		} else {
 			JOptionPane.showMessageDialog(null, "无法创建托盘菜单，请使用“任务管理器”关闭程序！");
@@ -99,6 +104,10 @@ public class Min implements ActionListener {
 				setSysClipboardText(decoderContent);
 			}
 		}
+	}
+
+	private static void QRCreate() {
+
 	}
 
 	private static void cut() {
