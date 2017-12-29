@@ -1,10 +1,4 @@
-import java.awt.Frame;
-import java.awt.Image;
-import java.awt.MenuItem;
-import java.awt.PopupMenu;
-import java.awt.SystemTray;
-import java.awt.Toolkit;
-import java.awt.TrayIcon;
+import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
@@ -15,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.regex.Pattern;
 
@@ -107,7 +102,16 @@ public class Min implements ActionListener {
 	}
 
 	private static void QRCreate() {
-
+		CreateQR frame = null;
+		try {
+			frame = new CreateQR();
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		assert frame != null;
+		frame.setLocation((dim.width - frame.getWidth()) >> 1, (dim.height - frame.getHeight()) / 2 - 100);
+		frame.setVisible(true);
 	}
 
 	private static void cut() {
