@@ -19,7 +19,6 @@ import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.Cursor;
 import java.awt.Dimension;
 
 @SuppressWarnings("serial")
