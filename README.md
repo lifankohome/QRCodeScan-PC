@@ -5,6 +5,7 @@ Desktop QRCode Recognize & Screen Capture
 ## Functions
 
  + Scan QRCode of a computer screen
+ + Create QRCode Immediately
  + Screen capture
 
 You can get a screenshot very much easily with this, after you select the area that you want to get, the IMAGE file will be copied to clipboard, then it can be pasted to where you like. 
@@ -37,4 +38,4 @@ OR
 
 ## Screenshot
 
-![设置截图](https://github.com/lifankohome/QRCode/blob/master/20171117194114.jpg)
+![软件截图](https://github.com/lifankohome/QRCode/blob/master/Screenshot.jpg)
