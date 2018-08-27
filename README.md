@@ -22,10 +22,6 @@ What's more, if the QRCode is a website, the program could open it in browser au
  + Download source code and export to a JAR file;
  + Double click to run the file, find it on taskbar and use it.
 
-OR
-
- +  Download qrcode.exe and run it (JRE required).
-
 ## Develop Environment
 
 > IntelliJ IDEA 15.0.2
